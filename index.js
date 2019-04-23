@@ -29,9 +29,8 @@ function getTime() {
     const minutes = date.getMinutes();
     const hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
     const seconds = date.getSeconds();
-    const ampm = hours >= 12 ? "AM" : "PM";
 
-    clockTitle.innerHTML = `${ampm} ${hours < 10 ? `0${hours}` : hours}:${
+    clockTitle.innerHTML = `${hours < 10 ? `AM 0${hours}` : `PM ${hours}`}:${
         minutes < 10 ? `0${minutes}` : minutes
     }:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
